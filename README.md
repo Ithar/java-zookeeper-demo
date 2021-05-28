@@ -30,9 +30,11 @@ Stack  | version |
 
 `mvn clean package`
 
+`jenv shell 11.0.2`
+
 `java -jar <PROJECT_ROOT>target/leader.election-1.0-SNAPSHOT-jar-with-dependencies.jar`
 
 ## Application GIT branches
-- master
+- main
 
 ## Further enhancements 
