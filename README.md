@@ -5,6 +5,7 @@ Application: Maven Apache ZooKepper demo
 #### Features
 - ZooKeeper server
 - Auto-healing with new leader election
+- Fault Tolerant and horizontally scalable cluster
 
 ## 
 
@@ -12,8 +13,7 @@ Application: Maven Apache ZooKepper demo
 
 Stack  | version |
 --- | --- |  
-*Java* | 1.8
-*Frontend* | n/a
+*Java* | 11
 *Build Tool* | Maven
 *Build env* | java jar
 
@@ -38,3 +38,4 @@ Stack  | version |
 - main
 
 ## Further enhancements 
+- Perform processing on each node
