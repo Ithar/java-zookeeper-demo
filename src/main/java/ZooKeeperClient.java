@@ -11,7 +11,7 @@ public class ZooKeeperClient {
     private static final ZNodeService zNodeService = new ZNodeService();
 
     private static final String ZOOKEEPER_ADDRESS = "localhost:2181";
-    private static final int SESSION_TIMEOUT = 2000;
+    private static final int SESSION_TIMEOUT = 4000;
 
     private ZooKeeper zooKeeper;
 

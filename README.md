@@ -22,9 +22,9 @@ Stack  | version |
 
 `vim <ZOOKEEPER_HOME>/cong/zoo.cfg && dataDir=<ZOOKEEPER_HOME>/logs`
 
-`cd <ZOOKEEPER_HOME>/bin/zkCli.sh && create /election ""`
-
 `cd <ZOOKEEPER_HOME>/bin && ./zkServer.sh start`
+
+`cd <ZOOKEEPER_HOME>/bin/zkCli.sh && create /election ""`
 
 ## Application Run
 
