@@ -1,9 +1,9 @@
 import org.apache.zookeeper.*;
 import org.apache.zookeeper.data.Stat;
 
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.Timer;
 
 public class ZNodeService implements Watcher  {
 
@@ -16,6 +16,7 @@ public class ZNodeService implements Watcher  {
         this.zooKeeper = zooKeeper;
         createZNode(zooKeeper);
         determineLeader(zooKeeper);
+        pingAliveMsg();
     }
 
     private void createZNode(ZooKeeper zooKeeper) {
@@ -61,6 +62,11 @@ public class ZNodeService implements Watcher  {
             System.out.println("Failed to elect leader due to: " + e.getMessage());
         }
 
+    }
+
+    private void pingAliveMsg() {
+       Timer timer = new Timer();
+       timer.schedule(new PingTask(currentZNodeName), 0 , 2000);
     }
 
     @Override
